@@ -8,12 +8,12 @@
 
     <interface context="Mechanical">
         <toolbar name="LeapToolsMainToolBar" caption="Leap Tools">
-            <entry name="ChangeNameButton" icon="MoveTransformDown" caption="Rename Analysis">
+            <entry name="ChangeNameButton" icon="analysisname" caption="Rename Analysis">
                 <callbacks>
                     <onclick>ProjectSchematicNameToAnalysisName</onclick>
                 </callbacks>
             </entry>
-            <entry name="ChangeWBNameButton" icon="stress" caption="Rename WB Systems">
+            <entry name="ChangeWBNameButton" icon="wbname" caption="Rename WB Systems">
                 <callbacks>
                     <onclick>AnalysisNameToProjectSchematicName</onclick>
                 </callbacks>
