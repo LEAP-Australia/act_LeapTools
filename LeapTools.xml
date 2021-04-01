@@ -1,0 +1,24 @@
+<extension name="LeapTools" version="1">
+    <author>Khesh Selvaganapathi</author>
+    <description>
+        A set of usability tools 
+    </description>
+    <guid>E5063606-F1CB-4DF6-8696-6FE3016E2FE6</guid>
+    <script src="script.py" />
+
+    <interface context="Mechanical">
+        <toolbar name="LeapToolsMainToolBar" caption="Leap Tools">
+            <entry name="ChangeNameButton" icon="MoveTransformDown" caption="Rename Analysis">
+                <callbacks>
+                    <onclick>ProjectSchematicNameToAnalysisName</onclick>
+                </callbacks>
+            </entry>
+            <entry name="ChangeWBNameButton" icon="stress" caption="Rename WB Systems">
+                <callbacks>
+                    <onclick>AnalysisNameToProjectSchematicName</onclick>
+                </callbacks>
+            </entry>
+        </toolbar>
+    </interface>
+</extension>
+
