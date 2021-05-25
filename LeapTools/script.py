@@ -72,5 +72,5 @@ def DirectRpScopingIsValid(rpObj, prop):
     else:
         return False
 
-    
-
+def WriteRpInput(obj, solverData, stream):
+    ExtAPI.Log.WriteError('TESTTTTT')

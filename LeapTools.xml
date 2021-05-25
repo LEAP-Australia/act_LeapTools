@@ -31,6 +31,9 @@
             <target type="DataModel" />
         </object>
         <object name="DirectRP" version="1">
+            <callbacks>
+                <getcommands location="pre">WriteRpInput</getcommands>
+            </callbacks>
             <target type="userobject" name="DirectRPContainer" />
             <property name="Geometry" caption="Geometry" control="scoping">
             </property>
