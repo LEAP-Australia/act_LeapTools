@@ -52,3 +52,25 @@ def AnalysisNameToProjectSchematicName(arg):
     thread = System.Threading.Thread(System.Threading.ThreadStart(rename))
     thread.Start()
 
+
+def CreateDirectRemotePoint(analysis):
+    userObjects = ExtAPI.DataModel.GetUserObjects("LeapTools")
+    parent = None
+    for userObject in userObjects:
+        if userObject.Name == "DirectRPContainer":
+            parent = userObject
+            break
+    if not parent:
+        parent = ExtAPI.DataModel.CreateObject("DirectRPContainer","LeapTools")
+    
+    parent.CreateChild("DirectRP")
+
+
+def DirectRpScopingIsValid(rpObj, prop):
+    if prop.Value is not None:
+        return prop.Value.Ids.Count == 1 
+    else:
+        return False
+
+    
+

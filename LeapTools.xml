@@ -18,7 +18,37 @@
                     <onclick>AnalysisNameToProjectSchematicName</onclick>
                 </callbacks>
             </entry>
+            <separator/>
+            <entry name="DirectRpButton" icon="load" caption="Fresh Remote Point">
+                <callbacks>
+                    <onclick>CreateDirectRemotePoint</onclick>
+                </callbacks>
+            </entry>
         </toolbar>
     </interface>
+    <simdata context="Mechanical">
+        <object name="DirectRPContainer" version="1">
+            <target type="DataModel" />
+        </object>
+        <object name="DirectRP" version="1">
+            <target type="userobject" name="DirectRPContainer" />
+            <property name="Geometry" caption="Geometry" control="scoping">
+            </property>
+            <property name="Pilot" caption="Pilot Node" control="scoping">
+                <attributes selection_filter="vertex|node" />
+                <callbacks>
+                    <isvalid>DirectRpScopingIsValid</isvalid>
+                </callbacks>
+            </property>
+            <propertygroup name="DefPG" caption="Definition" display="caption">
+                <property name="Behavior" caption="Behavior" control="select" default="Deformable">
+                    <attributes options="Deformable,Rigid" />
+                </property>
+                <propertygroup name="DOF Selection" caption="DOF Selection" display="property" control="select" default="All DoFs Active">
+                    <attributes options="All DoFs Active,Manual" />
+                </propertygroup>
+            </propertygroup>
+        </object>
+    </simdata>
 </extension>
 
