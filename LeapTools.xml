@@ -36,6 +36,7 @@
             </callbacks>
             <target type="userobject" name="DirectRPContainer" />
             <property name="Geometry" caption="Geometry" control="scoping">
+                <attributes selection_filter="face|edge|vertex|node" />
             </property>
             <property name="Pilot" caption="Pilot Node" control="scoping">
                 <attributes selection_filter="vertex|node" />
@@ -44,10 +45,13 @@
                 </callbacks>
             </property>
             <propertygroup name="DefPG" caption="Definition" display="caption">
-                <property name="Behavior" caption="Behavior" control="select" default="Deformable">
+                <property name="Behavior" caption="Behavior"
+                          control="select" default="Deformable">
                     <attributes options="Deformable,Rigid" />
                 </property>
-                <propertygroup name="DOF Selection" caption="DOF Selection" display="property" control="select" default="All DoFs Active">
+                <propertygroup name="DOF Selection" caption="DOF Selection"
+                               display="property" control="select"
+                               default="All DoFs Active">
                     <attributes options="All DoFs Active,Manual" />
                 </propertygroup>
             </propertygroup>
