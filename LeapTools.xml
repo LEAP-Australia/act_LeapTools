@@ -53,9 +53,32 @@
                                display="property" control="select"
                                default="All DoFs Active">
                     <attributes options="All DoFs Active,Manual" />
+                    <property name="X" caption="X Component" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
+                    <property name="Y" caption="Y Component" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
+                    <property name="Z" caption="Z Component" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
+                    <property name="ROTX" caption="Rotation X" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
+                    <property name="ROTY" caption="Rotation Y" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
+                    <property name="ROTZ" caption="Rotation Z" control="select" default="Active"
+                              visibleon="Manual">
+                        <attributes options="Active,Inactive" />
+                    </property>
                 </propertygroup>
             </propertygroup>
         </object>
     </simdata>
 </extension>
-
